@@ -1,0 +1,1426 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laysa Ventura · Locação de LED — Depilação profissional</title>
+<meta name="description" content="Locação de equipamento de depilação a LED com Laysa Ventura. Entrega, montagem e busca incluídas. Atendendo até 300km de Nova Andradina, MS.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Italiana&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    /* ============================================================
+       PALETA V3.1 — champagne/taupe quente (sem verde, sem preto)
+       Variáveis mantêm nome "sage" por compatibilidade do código,
+       mas os valores agora são tons de bege champagne e taupe.
+       ============================================================ */
+
+    --bg:           #FBF7F0;    /* off-white cremoso quase branco */
+    --bg-2:         #F2EBDB;    /* bege suave, fundo de seção */
+    --bg-3:         #E0D2BB;    /* bege médio quente, "dark" sem preto */
+    --sage:         #B5A088;    /* champagne médio (era sálvia) */
+    --sage-light:   #DBC9B0;    /* champagne claro */
+    --sage-deep:    #6E5B45;    /* taupe médio, para texto e contraste */
+    --sage-darkest: #3E342A;    /* marrom profundo quente (substitui preto/verde escuro) */
+    --cream:        #FAF6EC;    /* creme claro, para texto sobre escuro */
+    --gold:         #B49B6F;    /* dourado champagne, acento luxo */
+    --gold-soft:    #D4C29A;    /* dourado mais claro */
+    --rose:         #D4B5B0;    /* rosa pó, acento delicado */
+    --ink:          #2C2A26;    /* texto principal (preto quente, não puro) */
+    --ink-soft:     #5C5851;    /* texto secundário */
+    --grey:         #8B8680;    /* texto auxiliar */
+    --line:         #E0D2BB;    /* linhas e separadores */
+    --line-dark:    #5A4A38;    /* linha sobre fundo escuro */
+
+    /* Tipografia */
+    --display:      'Cormorant Garamond', 'Times New Roman', serif;
+    --display-2:    'Italiana', 'Cormorant Garamond', serif;
+    --sans:         'Manrope', -apple-system, system-ui, sans-serif;
+
+    /* Layout */
+    --maxw:         1080px;
+    --gutter:       clamp(1.25rem, 4vw, 2.5rem);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection { background: var(--sage-light); color: var(--sage-darkest); }
+
+  img { display: block; max-width: 100%; height: auto; }
+
+  /* ============================================================
+     LAYOUT BASE
+     ============================================================ */
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+  .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 var(--gutter); }
+
+  section { padding: clamp(4rem, 9vw, 6.5rem) 0; }
+
+  /* ============================================================
+     ELEMENTOS DECORATIVOS — folhagem SVG inline
+     ============================================================ */
+
+  .leaf-divider {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: auto;
+    opacity: 0.45;
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    color: var(--sage);
+  }
+  .ornament::before,
+  .ornament::after {
+    content: '';
+    flex: 1;
+    max-width: 80px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--sage) 50%, transparent);
+  }
+
+  /* ============================================================
+     TIPOGRAFIA
+     ============================================================ */
+
+  h1, h2, h3 {
+    font-family: var(--display);
+    font-weight: 300;
+    color: var(--sage-darkest);
+    margin: 0 0 0.5em;
+    letter-spacing: -0.005em;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 7.5vw, 4.5rem);
+    line-height: 1.02;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.12;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.5em;
+  }
+
+  p { margin: 0 0 1em; }
+
+  em.italic {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--sage-deep);
+  }
+
+  em.script {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold);
+  }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    margin: 0 0 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--sage);
+  }
+  .eyebrow.on-dark { color: var(--gold-soft); }
+  .eyebrow.on-dark::before { background: var(--gold-soft); }
+
+  .lede {
+    font-family: var(--sans);
+    font-size: clamp(1.02rem, 1.6vw, 1.15rem);
+    color: var(--ink-soft);
+    max-width: 46ch;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* ============================================================
+     HEADER
+     ============================================================ */
+
+  header.site {
+    background: var(--bg);
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+    background: rgba(251, 247, 240, 0.92);
+  }
+
+  header.site .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .brand {
+    font-family: var(--display);
+    font-weight: 400;
+    color: var(--sage-darkest);
+    text-decoration: none;
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  .brand-name {
+    font-size: 1.45rem;
+    letter-spacing: 0.01em;
+  }
+  .brand-tag {
+    font-family: var(--sans);
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--grey);
+    display: none;
+  }
+  @media (min-width: 600px) { .brand-tag { display: inline; } }
+
+  .header-cta {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    color: var(--sage-darkest);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--sage);
+    transition: color 0.2s;
+  }
+  .header-cta:hover { color: var(--sage-deep); }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+
+  .hero {
+    background: var(--bg);
+    padding: clamp(3rem, 7vw, 5rem) 0 clamp(4rem, 9vw, 6rem);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* folhagem decorativa sutil no canto */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(155, 168, 134, 0.10) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212, 181, 176, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  @media (min-width: 880px) {
+    .hero-grid {
+      grid-template-columns: 1.05fr 1fr;
+      gap: 4.5rem;
+    }
+  }
+
+  .hero-text h1 .em {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--sage-deep);
+    font-weight: 400;
+  }
+
+  .hero-text .lede {
+    margin-top: 1.5rem;
+    max-width: 36ch;
+  }
+
+  .hero-cta-row {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
+  }
+  @media (min-width: 500px) {
+    .hero-meta { grid-template-columns: repeat(3, 1fr); }
+  }
+  .hero-meta div { display: flex; flex-direction: column; gap: 0.25rem; }
+  .hero-meta .meta-label {
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+  .hero-meta .meta-value {
+    font-family: var(--display);
+    font-size: 1.1rem;
+    color: var(--sage-darkest);
+    font-weight: 400;
+  }
+
+  /* Placeholder de foto da Laysa no hero */
+  .hero-photo {
+    aspect-ratio: 4/5;
+    background: linear-gradient(160deg, var(--sage-light) 0%, var(--bg-2) 65%, var(--gold-soft) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .hero-photo::before {
+    /* moldura decorativa interna */
+    content: '';
+    position: absolute;
+    inset: 1.5rem;
+    border: 1px solid rgba(92, 102, 73, 0.25);
+    pointer-events: none;
+  }
+  .hero-photo-label {
+    text-align: center;
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--sage-deep);
+    font-size: 1.1rem;
+    padding: 2rem;
+    z-index: 1;
+    opacity: 0.7;
+  }
+  .hero-photo-label small {
+    display: block;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: 0.75rem;
+  }
+
+  /* ============================================================
+     BOTÃO
+     ============================================================ */
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 1.05rem 2rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    transition: all 0.25s ease;
+    background: var(--sage-deep);
+    color: var(--cream);
+  }
+  .btn:hover {
+    background: var(--sage-darkest);
+    transform: translateY(-1px);
+  }
+  .btn::after {
+    content: '→';
+    font-size: 1.05rem;
+    transition: transform 0.25s;
+  }
+  .btn:hover::after { transform: translateX(4px); }
+
+  .btn-link {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    color: var(--sage-darkest);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--sage);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-link:hover { color: var(--sage-deep); border-bottom-color: var(--gold); }
+
+  /* ============================================================
+     SOBRE A LAYSA
+     ============================================================ */
+
+  .about {
+    background: var(--bg-2);
+    position: relative;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  @media (min-width: 720px) {
+    .about-grid { grid-template-columns: 1fr 1.25fr; gap: 4rem; }
+  }
+
+  .about-photo {
+    aspect-ratio: 3/4;
+    background: linear-gradient(145deg, var(--bg) 0%, var(--bg-3) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .about-photo::before {
+    content: '';
+    position: absolute;
+    inset: 1rem;
+    border: 1px solid rgba(92, 102, 73, 0.18);
+    pointer-events: none;
+  }
+  .about-photo-label {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--sage-deep);
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 1.5rem;
+    opacity: 0.7;
+  }
+  .about-photo-label small {
+    display: block;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: 0.5rem;
+  }
+
+  .about-text p {
+    font-size: 1.04rem;
+    color: var(--ink);
+    line-height: 1.75;
+  }
+
+  .signature {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-family: var(--display-2);
+    font-size: 1.8rem;
+    color: var(--sage-deep);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+
+  /* ============================================================
+     SEÇÃO "O QUE ENTRA" — fundo sálvia escuro (substitui preto)
+     ============================================================ */
+
+  .features-section {
+    background: var(--sage-darkest);
+    color: var(--cream);
+  }
+  .features-section h2 { color: var(--cream); }
+
+  .features-section .lede {
+    color: rgba(250, 246, 236, 0.75);
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .features-list {
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--line-dark);
+  }
+  @media (min-width: 720px) {
+    .features-list {
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line-dark);
+    }
+  }
+
+  .feature {
+    padding: 2.25rem 0;
+    border-bottom: 1px solid var(--line-dark);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  @media (min-width: 720px) {
+    .feature:nth-child(odd) { padding-right: 2.5rem; }
+    .feature:nth-child(even) {
+      padding-left: 2.5rem;
+      border-left: 1px solid var(--line-dark);
+    }
+  }
+
+  .feature-num {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--gold-soft);
+    font-size: 1.7rem;
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 2.5rem;
+    font-weight: 400;
+  }
+  .feature h3 {
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .feature p {
+    color: rgba(250, 246, 236, 0.7);
+    font-size: 0.96rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ============================================================
+     EQUIPAMENTO
+     ============================================================ */
+
+  .equipment {
+    background: var(--bg);
+  }
+
+  .equipment-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+  @media (min-width: 720px) {
+    .equipment-grid { grid-template-columns: 1fr 1.05fr; gap: 4rem; }
+  }
+
+  .equipment-photo {
+    aspect-ratio: 4/5;
+    background: linear-gradient(160deg, var(--bg-2) 0%, var(--sage-light) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  .equipment-photo::before {
+    content: '';
+    position: absolute;
+    inset: 1.5rem;
+    border: 1px solid rgba(92, 102, 73, 0.2);
+  }
+  .equipment-photo-label {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--sage-deep);
+    font-size: 1rem;
+    text-align: center;
+    z-index: 1;
+    opacity: 0.75;
+  }
+  .equipment-photo-label small {
+    display: block;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: 0.6rem;
+  }
+
+  .equipment-text p { font-size: 1.04rem; color: var(--ink); }
+
+  .specs {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+  }
+  .specs li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--line);
+    gap: 1rem;
+  }
+  .specs li:first-child { border-top: 1px solid var(--line); }
+  .specs .label {
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+  .specs .value {
+    font-family: var(--display);
+    font-size: 1.2rem;
+    color: var(--sage-darkest);
+    font-weight: 400;
+    text-align: right;
+  }
+
+  /* ============================================================
+     QUEM PODE ALUGAR + TREINAMENTO
+     ============================================================ */
+
+  .eligibility {
+    background: var(--bg-2);
+  }
+
+  .eligibility-text {
+    max-width: 58ch;
+    font-size: 1.08rem;
+    color: var(--ink);
+    line-height: 1.75;
+    margin-bottom: 0;
+  }
+  .eligibility-text em {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--sage-deep);
+    font-weight: 400;
+    font-size: 1.05em;
+  }
+
+  .training-card {
+    margin-top: 3.5rem;
+    padding: clamp(2rem, 4vw, 2.8rem);
+    background: var(--bg);
+    border-left: 3px solid var(--gold);
+    position: relative;
+  }
+  .training-card h3 {
+    font-family: var(--display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--sage-darkest);
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+    line-height: 1.15;
+  }
+  .training-card p {
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 52ch;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  .training-card .corner {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  /* ============================================================
+     CIDADES — texto editorial corrido
+     ============================================================ */
+
+  .cities-section {
+    background: var(--bg);
+    text-align: center;
+  }
+  .cities-section .eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cities-text {
+    font-family: var(--display);
+    font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+    line-height: 1.4;
+    font-weight: 300;
+    color: var(--sage-darkest);
+    max-width: 30ch;
+    margin: 0 auto;
+  }
+  .cities-text .em {
+    font-style: italic;
+    color: var(--sage-deep);
+  }
+  .cities-foot {
+    margin-top: 2rem;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    max-width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ============================================================
+     FAQ
+     ============================================================ */
+
+  .faq {
+    background: var(--bg-2);
+  }
+  .faq-list {
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+  }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.6rem 0;
+    font-family: var(--display);
+    font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+    font-weight: 400;
+    color: var(--sage-darkest);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.25s;
+  }
+  .faq-item summary:hover { color: var(--sage-deep); }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-family: var(--display);
+    font-size: 1.5rem;
+    color: var(--sage);
+    transition: transform 0.3s;
+    font-weight: 300;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item .answer {
+    padding: 0 0 1.8rem;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 60ch;
+  }
+
+  /* ============================================================
+     FORMULÁRIO — cinza claro quente (substitui preto)
+     ============================================================ */
+
+  .form-section {
+    background: var(--bg-3);
+    position: relative;
+  }
+  .form-section::before {
+    /* sutileza decorativa no canto */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle at top right, rgba(180, 155, 111, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .form-intro {
+    max-width: 580px;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  .form-intro h2 { color: var(--sage-darkest); }
+  .form-intro .lede {
+    color: var(--ink-soft);
+    margin-top: 1rem;
+  }
+
+  .form-wrap {
+    max-width: 640px;
+    padding: clamp(2rem, 5vw, 3rem);
+    background: var(--bg);
+    border-top: 3px solid var(--sage-deep);
+    position: relative;
+  }
+
+  .field { margin-bottom: 1.8rem; }
+  .field label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    margin-bottom: 0.55rem;
+    font-weight: 500;
+  }
+  .field input,
+  .field select {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 0.65rem 0;
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    color: var(--ink);
+    border-radius: 0;
+    outline: none;
+    transition: border-color 0.25s;
+  }
+  .field input::placeholder {
+    color: var(--grey);
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1rem;
+  }
+  .field input:focus,
+  .field select:focus {
+    border-bottom-color: var(--sage-deep);
+  }
+  .field select { color: var(--ink); cursor: pointer; }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  @media (min-width: 540px) {
+    .form-grid.two {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 2rem;
+    }
+  }
+
+  .form-submit { margin-top: 0.5rem; }
+
+  .form-foot small {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  .form-msg {
+    margin-top: 1.8rem;
+    padding: 1.2rem 1.4rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    display: none;
+    font-family: var(--sans);
+  }
+  .form-msg.success {
+    display: block;
+    background: rgba(155, 168, 134, 0.15);
+    color: var(--sage-darkest);
+    border-left: 3px solid var(--sage-deep);
+  }
+  .form-msg.success::before {
+    content: '✓  ';
+    font-family: var(--display);
+    color: var(--sage-deep);
+  }
+  .form-msg.error {
+    display: block;
+    background: rgba(212, 181, 176, 0.15);
+    color: var(--ink);
+    border-left: 3px solid var(--rose);
+  }
+  .form-msg a { color: var(--sage-deep); }
+
+  /* ============================================================
+     RODAPÉ — sálvia escuro com creme
+     ============================================================ */
+
+  footer.site {
+    background: var(--sage-darkest);
+    color: var(--cream);
+    padding: 4rem 0 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 600px) {
+    .footer-grid { grid-template-columns: 1.4fr 1fr; }
+  }
+
+  .footer-brand {
+    font-family: var(--display);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.05;
+    margin-bottom: 0.75rem;
+  }
+  .footer-brand .italic {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--gold-soft);
+  }
+  .footer-tag {
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(250, 246, 236, 0.55);
+  }
+
+  .footer-wa {
+    padding: 1.4rem 1.8rem;
+    background: rgba(250, 246, 236, 0.06);
+    border: 1px solid var(--line-dark);
+    color: var(--cream);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: all 0.25s;
+  }
+  .footer-wa:hover {
+    background: rgba(250, 246, 236, 0.12);
+    border-color: var(--gold-soft);
+  }
+  .footer-wa .label {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+  }
+  .footer-wa .value {
+    font-family: var(--display);
+    font-size: 1.35rem;
+    color: var(--cream);
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid var(--line-dark);
+    font-size: 0.78rem;
+    color: rgba(250, 246, 236, 0.45);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  /* ============================================================
+     ANIMAÇÃO SUTIL
+     ============================================================ */
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-text > * { animation: fadeUp 0.9s ease-out both; }
+  .hero-text > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-text > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero-text > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-text > *:nth-child(4) { animation-delay: 0.4s; }
+  .hero-text > *:nth-child(5) { animation-delay: 0.5s; }
+  .hero-photo { animation: fadeUp 1s ease-out 0.35s both; }
+
+  :focus-visible {
+    outline: 2px solid var(--sage);
+    outline-offset: 3px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site">
+  <div class="wrap">
+    <a href="#" class="brand">
+      <span class="brand-name">Laysa Ventura</span>
+      <span class="brand-tag">Locação</span>
+    </a>
+    <a href="#orcamento" class="header-cta">Solicitar orçamento</a>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+
+    <div class="hero-text">
+      <p class="eyebrow">Locação · Depilação a LED</p>
+      <h1>
+        Pronta pra atender com<br>
+        <span class="em">LED</span> na sua cidade?
+      </h1>
+      <p class="lede">
+        Equipamento profissional entregue, montado e pronto pra uso. Atendendo todo Mato Grosso do Sul e região, com a Laysa Ventura.
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="#orcamento" class="btn">Solicitar orçamento</a>
+        <a href="https://wa.me/5567935016168" class="btn-link" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+
+      <div class="hero-meta">
+        <div>
+          <span class="meta-label">Raio</span>
+          <span class="meta-value">até 300 km</span>
+        </div>
+        <div>
+          <span class="meta-label">Sede</span>
+          <span class="meta-value">Nova Andradina</span>
+        </div>
+        <div>
+          <span class="meta-label">Pacotes</span>
+          <span class="meta-value">6h · 8h · 12h</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <span class="hero-photo-label">
+        Retrato profissional<br>da Laysa
+        <small>aguardando arquivo</small>
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SOBRE A LAYSA
+     ============================================================ -->
+<section class="about">
+  <div class="wrap about-grid">
+
+    <div class="about-photo">
+      <span class="about-photo-label">
+        Foto em ambiente profissional
+        <small>a definir com a Laysa</small>
+      </span>
+    </div>
+
+    <div class="about-text">
+      <p class="eyebrow">Quem está por trás</p>
+      <h2>Sou a Laysa.</h2>
+      <p>
+        Atendo estética em Nova Andradina há <em class="italic">[X anos]</em>, com clínica própria e protocolo autoral em criolipólise. A locação do equipamento de LED nasce do mesmo cuidado que aplico nos meus atendimentos.
+      </p>
+      <p>
+        Levo a tecnologia até a sua cidade, pronta pra uso. Você atende. Eu cuido do resto.
+      </p>
+      <div class="signature">Laysa Ventura</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     O QUE ESTÁ INCLUSO (sálvia escuro substitui preto)
+     ============================================================ -->
+<section class="features-section">
+  <div class="wrap">
+    <p class="eyebrow on-dark">O que está incluso</p>
+    <h2>Locação completa.<br>Sem você se preocupar com nada além de atender.</h2>
+
+    <div class="features-list">
+      <div class="feature">
+        <span class="feature-num">01</span>
+        <div>
+          <h3>Entrega no local</h3>
+          <p>Levo o equipamento até o endereço combinado no dia e hora marcados.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-num">02</span>
+        <div>
+          <h3>Montagem</h3>
+          <p>Equipamento instalado e pronto antes do início do seu atendimento.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-num">03</span>
+        <div>
+          <h3>Desmontagem e busca</h3>
+          <p>Recolho ao fim da locação no mesmo endereço, sem você se preocupar.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-num">04</span>
+        <div>
+          <h3>Suporte por WhatsApp</h3>
+          <p>Disponível durante toda a locação pra qualquer dúvida ou imprevisto.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     EQUIPAMENTO
+     ============================================================ -->
+<section class="equipment">
+  <div class="wrap">
+    <p class="eyebrow">Equipamento</p>
+    <h2>Zyon Pro <em class="italic">Cromatic</em></h2>
+
+    <div class="equipment-grid">
+      <div class="equipment-photo">
+        <span class="equipment-photo-label">
+          Foto do equipamento
+          <small>aguardando arquivo</small>
+        </span>
+      </div>
+      <div class="equipment-text">
+        <p>
+          Máquina profissional de depilação a LED, modelo Zyon Pro da Cromatic. Equipamento utilizado por mim na clínica e disponibilizado pra locação dentro do raio.
+        </p>
+
+        <ul class="specs">
+          <li><span class="label">Tecnologia</span><span class="value">LED</span></li>
+          <li><span class="label">Pacotes</span><span class="value">6h · 8h · 12h</span></li>
+          <li><span class="label">Hora extra</span><span class="value">R$ 150</span></li>
+          <li><span class="label">Operação</span><span class="value">Você opera</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     QUEM PODE ALUGAR + CARD DE TREINAMENTO
+     ============================================================ -->
+<section class="eligibility">
+  <div class="wrap-narrow">
+    <p class="eyebrow">Quem pode alugar</p>
+    <h2>Profissionais da área da saúde.</h2>
+
+    <p class="eligibility-text">
+      Alugo para <em>profissionais formados em áreas da saúde</em> ou estudantes no último ano de cursos da saúde. A operação do equipamento durante a locação é responsabilidade sua. A comprovação da formação é solicitada no fechamento do orçamento.
+    </p>
+
+    <div class="training-card">
+      <span class="corner">+</span>
+      <h3>Nunca operou LED antes?</h3>
+      <p>Ofereço treinamento de uso do equipamento. Se você fizer o curso completo de depilação a LED comigo, a locação sai com desconto.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     ONDE ATENDO
+     ============================================================ -->
+<section class="cities-section">
+  <div class="wrap-narrow">
+    <p class="eyebrow">Onde atendo</p>
+    <p class="cities-text">
+      Atendo em <em class="em">Cidade 1</em>, Cidade 2, Cidade 3, Cidade 4 e cidades num raio de <span class="em">300 km</span>.
+    </p>
+    <p class="cities-foot">
+      Sua cidade não está aqui? Solicite o orçamento mesmo assim. Avalio caso a caso.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="faq">
+  <div class="wrap-narrow">
+    <p class="eyebrow">Dúvidas frequentes</p>
+    <h2>Antes do orçamento.</h2>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Quanto custa a locação?</summary>
+        <div class="answer">Depende da cidade e do pacote (6h, 8h ou 12h). Hora extra fica em R$ 150. Pelo formulário você recebe o valor exato pra sua cidade.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Quem pode alugar?</summary>
+        <div class="answer">Profissionais formados em áreas da saúde e estudantes no último ano de cursos da saúde. A comprovação é solicitada no fechamento.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Atende fora dos 300 km?</summary>
+        <div class="answer">O raio padrão é até 300 km de Nova Andradina, MS. Cidades fora do raio são avaliadas caso a caso, com possível ajuste no valor de transporte.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>E o pagamento, como funciona?</summary>
+        <div class="answer">[ A definir com a Laysa — formas aceitas, antecipação, caução ]</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<span id="orcamento" style="display:block; height:1px; visibility:hidden;"></span>
+
+<!-- ============================================================
+     FORMULÁRIO — cinza claro quente (substitui preto da v2)
+     ============================================================ -->
+<section class="form-section">
+  <div class="wrap">
+
+    <div class="form-intro">
+      <p class="eyebrow">Solicitar orçamento</p>
+      <h2>Conta da sua locação.</h2>
+      <p class="lede">Respondo pelo WhatsApp em até 24h com o valor fechado pra sua cidade e pacote.</p>
+    </div>
+
+    <form class="form-wrap" id="leadForm" novalidate>
+
+      <div class="form-grid two">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="seu nome">
+        </div>
+        <div class="field">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required autocomplete="tel" placeholder="(00) 0 0000-0000">
+        </div>
+      </div>
+
+      <div class="form-grid two">
+        <div class="field">
+          <label for="cidade">Cidade · UF</label>
+          <input type="text" id="cidade" name="cidade" required autocomplete="address-level2" placeholder="onde será a locação">
+        </div>
+        <div class="field">
+          <label for="pacote">Pacote</label>
+          <select id="pacote" name="pacote">
+            <option value="">selecione</option>
+            <option value="6h">6 horas</option>
+            <option value="8h">8 horas</option>
+            <option value="12h">12 horas</option>
+            <option value="indefinido">Ainda não sei</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn" id="submitBtn">Enviar solicitação</button>
+      </div>
+
+      <div class="form-foot">
+        <small>Ao enviar, você concorda em receber retorno pelo WhatsApp informado.</small>
+      </div>
+
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     RODAPÉ
+     ============================================================ -->
+<footer class="site">
+  <div class="wrap">
+
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Laysa <span class="italic">Ventura</span></div>
+        <p class="footer-tag">Locação de Equipamento · Nova Andradina, MS</p>
+      </div>
+
+      <a href="https://wa.me/5567935016168" class="footer-wa" target="_blank" rel="noopener">
+        <span class="label">WhatsApp direto</span>
+        <span class="value">(67) 93501-6168</span>
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Laysa Ventura</span>
+      <span>Atendimento em horário comercial</span>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // ============================================================
+  // CAPTURA DE LEAD
+  // Fluxo:
+  // 1. Valida campos
+  // 2. Salva dados na planilha (Apps Script) em background
+  // 3. Abre WhatsApp em nova aba com dados pré-preenchidos
+  // 4. Se popup for bloqueado, mostra link clicável de fallback
+  // ============================================================
+
+  const APPS_SCRIPT_URL = 'COLE_AQUI_O_URL_DO_APPS_SCRIPT';
+
+  // Número de TESTE (Julio): 5567935016168
+  // Número de PRODUÇÃO (Laysa/clínica): a confirmar antes do lançamento
+  const WHATSAPP_NUMBER = '5567935016168';
+
+  const form = document.getElementById('leadForm');
+  const msg  = document.getElementById('formMsg');
+  const btn  = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // 1. Validação
+    const required = ['nome', 'whatsapp', 'cidade'];
+    for (const field of required) {
+      const val = form.elements[field].value.trim();
+      if (!val) {
+        showMsg('error', 'Preencha os campos obrigatórios para enviar.');
+        form.elements[field].focus();
+        return;
+      }
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Abrindo WhatsApp...';
+
+    // 2. Dados coletados
+    const data = {
+      nome:     form.elements.nome.value.trim(),
+      whatsapp: form.elements.whatsapp.value.trim(),
+      cidade:   form.elements.cidade.value.trim(),
+      pacote:   form.elements.pacote.value,
+      origem:   document.referrer || 'direto',
+      ts:       new Date().toISOString()
+    };
+
+    // 3. Mensagem pré-preenchida pro WhatsApp
+    const texto = encodeURIComponent(
+      'Olá! Vim pela página de locação de LED e quero solicitar um orçamento.\n\n' +
+      'Nome: ' + data.nome + '\n' +
+      'WhatsApp: ' + data.whatsapp + '\n' +
+      'Cidade: ' + data.cidade + '\n' +
+      'Pacote: ' + (data.pacote || 'a definir')
+    );
+    const whatsappUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + texto;
+
+    // 4. Salva na planilha em background (não aguarda resposta)
+    if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== 'COLE_AQUI_O_URL_DO_APPS_SCRIPT') {
+      fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(data)
+      }).catch(function(err) {
+        console.error('Erro ao salvar lead na planilha:', err);
+      });
+    }
+
+    // 5. Abre WhatsApp em nova aba — chamada SÍNCRONA dentro do handler
+    //    pra evitar bloqueio de popup pelo navegador
+    const win = window.open(whatsappUrl, '_blank');
+
+    // 6. Verifica se popup foi bloqueado
+    if (!win || win.closed || typeof win.closed === 'undefined') {
+      // Popup bloqueado — mostra link clicável de fallback
+      msg.innerHTML = 'Toque aqui pra abrir o WhatsApp: <a href="' + whatsappUrl + '" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:underline;">Continuar no WhatsApp →</a>';
+      msg.className = 'form-msg success';
+      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      // Abriu — mostra confirmação e reseta form
+      showMsg('success', 'Pronto. Te redirecionei pro WhatsApp pra finalizar o orçamento.');
+      form.reset();
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Enviar solicitação';
+  });
+
+  function showMsg(type, text) {
+    msg.textContent = text;
+    msg.className = 'form-msg ' + type;
+    msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+</script>
+
+</body>
+</html>

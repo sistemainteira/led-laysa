@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="pt-br">
 <head>
 <meta charset="utf-8">
@@ -416,6 +417,62 @@
     transition: color 0.2s, border-color 0.2s;
   }
   .btn-link:hover { color: var(--sage-deep); border-bottom-color: var(--gold); }
+
+  /* CTAs intermediários no fim de seções */
+  .cta-inline {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .cta-inline-center { justify-content: center; }
+  .cta-inline-dark { margin-top: 3rem; }
+
+  /* Variante do botão pra fundo escuro (sálvia/taupe escuro) */
+  .btn-on-dark {
+    background: var(--cream);
+    color: var(--sage-darkest);
+  }
+  .btn-on-dark:hover {
+    background: var(--gold-soft);
+    color: var(--sage-darkest);
+  }
+
+  /* ============================================================
+     BOTÃO FLUTUANTE — sempre visível, aponta pro formulário
+     ============================================================ */
+
+  .floating-cta {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 100;
+    background: var(--sage-darkest);
+    color: var(--cream);
+    padding: 0.85rem 1.3rem;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 4px 20px rgba(62, 52, 42, 0.25);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s ease;
+  }
+  .floating-cta:hover {
+    background: var(--ink);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(62, 52, 42, 0.35);
+  }
+  .floating-cta::after {
+    content: '→';
+    font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    .floating-cta { padding: 0.75rem 1.1rem; font-size: 0.78rem; }
+  }
 
   /* ============================================================
      SOBRE A LAYSA
@@ -1009,12 +1066,14 @@
   }
 
 </style>
+
 </head>
 <body>
 
 <!-- ============================================================
      HEADER
      ============================================================ -->
+
 <header class="site">
   <div class="wrap">
     <a href="#" class="brand">
@@ -1028,46 +1087,48 @@
 <!-- ============================================================
      HERO
      ============================================================ -->
+
 <section class="hero">
   <div class="wrap hero-grid">
 
-    <div class="hero-text">
-      <p class="eyebrow">Locação · Depilação a LED</p>
-      <h1>
-        Pronta pra atender com<br>
-        <span class="em">LED</span> na sua cidade?
-      </h1>
-      <p class="lede">
-        Equipamento profissional entregue, montado e pronto pra uso. Atendendo todo Mato Grosso do Sul e região, com a Laysa Ventura.
-      </p>
+```
+<div class="hero-text">
+  <p class="eyebrow">Locação · Depilação a LED</p>
+  <h1>
+    Pronta pra atender com<br>
+    <span class="em">LED</span> na sua cidade?
+  </h1>
+  <p class="lede">
+    Equipamento profissional entregue, montado e pronto pra uso. Atendendo todo Mato Grosso do Sul e região, com a Laysa Ventura.
+  </p>
 
-      <div class="hero-cta-row">
-        <a href="#orcamento" class="btn">Solicitar orçamento</a>
-        <a href="https://wa.me/5567935016168" class="btn-link" target="_blank" rel="noopener">Falar no WhatsApp</a>
-      </div>
+  <div class="hero-cta-row">
+    <a href="#orcamento" class="btn">Solicitar orçamento</a>
+  </div>
 
-      <div class="hero-meta">
-        <div>
-          <span class="meta-label">Raio</span>
-          <span class="meta-value">até 300 km</span>
-        </div>
-        <div>
-          <span class="meta-label">Sede</span>
-          <span class="meta-value">Nova Andradina</span>
-        </div>
-        <div>
-          <span class="meta-label">Pacotes</span>
-          <span class="meta-value">6h · 8h · 12h</span>
-        </div>
-      </div>
+  <div class="hero-meta">
+    <div>
+      <span class="meta-label">Raio</span>
+      <span class="meta-value">até 300 km</span>
     </div>
-
-    <div class="hero-photo">
-      <span class="hero-photo-label">
-        Retrato profissional<br>da Laysa
-        <small>aguardando arquivo</small>
-      </span>
+    <div>
+      <span class="meta-label">Sede</span>
+      <span class="meta-value">Nova Andradina</span>
     </div>
+    <div>
+      <span class="meta-label">Pacotes</span>
+      <span class="meta-value">6h · 8h · 12h</span>
+    </div>
+  </div>
+</div>
+
+<div class="hero-photo">
+  <span class="hero-photo-label">
+    Retrato profissional<br>da Laysa
+    <small>aguardando arquivo</small>
+  </span>
+</div>
+```
 
   </div>
 </section>
@@ -1075,27 +1136,34 @@
 <!-- ============================================================
      SOBRE A LAYSA
      ============================================================ -->
+
 <section class="about">
   <div class="wrap about-grid">
 
-    <div class="about-photo">
-      <span class="about-photo-label">
-        Foto em ambiente profissional
-        <small>a definir com a Laysa</small>
-      </span>
-    </div>
+```
+<div class="about-photo">
+  <span class="about-photo-label">
+    Foto em ambiente profissional
+    <small>a definir com a Laysa</small>
+  </span>
+</div>
 
-    <div class="about-text">
-      <p class="eyebrow">Quem está por trás</p>
-      <h2>Sou a Laysa.</h2>
-      <p>
-        Atendo estética em Nova Andradina há <em class="italic">[X anos]</em>, com clínica própria e protocolo autoral em criolipólise. A locação do equipamento de LED nasce do mesmo cuidado que aplico nos meus atendimentos.
-      </p>
-      <p>
-        Levo a tecnologia até a sua cidade, pronta pra uso. Você atende. Eu cuido do resto.
-      </p>
-      <div class="signature">Laysa Ventura</div>
-    </div>
+<div class="about-text">
+  <p class="eyebrow">Quem está por trás</p>
+  <h2>Sou a Laysa.</h2>
+  <p>
+    Atendo estética em Nova Andradina há <em class="italic">[X anos]</em>, com clínica própria e protocolo autoral em criolipólise. A locação do equipamento de LED nasce do mesmo cuidado que aplico nos meus atendimentos.
+  </p>
+  <p>
+    Levo a tecnologia até a sua cidade, pronta pra uso. Você atende. Eu cuido do resto.
+  </p>
+  <div class="signature">Laysa Ventura</div>
+
+  <div class="cta-inline">
+    <a href="#orcamento" class="btn">Quero solicitar orçamento</a>
+  </div>
+</div>
+```
 
   </div>
 </section>
@@ -1103,41 +1171,48 @@
 <!-- ============================================================
      O QUE ESTÁ INCLUSO (sálvia escuro substitui preto)
      ============================================================ -->
+
 <section class="features-section">
   <div class="wrap">
     <p class="eyebrow on-dark">O que está incluso</p>
     <h2>Locação completa.<br>Sem você se preocupar com nada além de atender.</h2>
 
-    <div class="features-list">
-      <div class="feature">
-        <span class="feature-num">01</span>
-        <div>
-          <h3>Entrega no local</h3>
-          <p>Levo o equipamento até o endereço combinado no dia e hora marcados.</p>
-        </div>
-      </div>
-      <div class="feature">
-        <span class="feature-num">02</span>
-        <div>
-          <h3>Montagem</h3>
-          <p>Equipamento instalado e pronto antes do início do seu atendimento.</p>
-        </div>
-      </div>
-      <div class="feature">
-        <span class="feature-num">03</span>
-        <div>
-          <h3>Desmontagem e busca</h3>
-          <p>Recolho ao fim da locação no mesmo endereço, sem você se preocupar.</p>
-        </div>
-      </div>
-      <div class="feature">
-        <span class="feature-num">04</span>
-        <div>
-          <h3>Suporte por WhatsApp</h3>
-          <p>Disponível durante toda a locação pra qualquer dúvida ou imprevisto.</p>
-        </div>
-      </div>
+```
+<div class="features-list">
+  <div class="feature">
+    <span class="feature-num">01</span>
+    <div>
+      <h3>Entrega no local</h3>
+      <p>Levo o equipamento até o endereço combinado no dia e hora marcados.</p>
     </div>
+  </div>
+  <div class="feature">
+    <span class="feature-num">02</span>
+    <div>
+      <h3>Montagem</h3>
+      <p>Equipamento instalado e pronto antes do início do seu atendimento.</p>
+    </div>
+  </div>
+  <div class="feature">
+    <span class="feature-num">03</span>
+    <div>
+      <h3>Desmontagem e busca</h3>
+      <p>Recolho ao fim da locação no mesmo endereço, sem você se preocupar.</p>
+    </div>
+  </div>
+  <div class="feature">
+    <span class="feature-num">04</span>
+    <div>
+      <h3>Suporte por WhatsApp</h3>
+      <p>Disponível durante toda a locação pra qualquer dúvida ou imprevisto.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cta-inline cta-inline-dark">
+  <a href="#orcamento" class="btn btn-on-dark">Pedir orçamento agora</a>
+</div>
+```
 
   </div>
 </section>
@@ -1145,31 +1220,34 @@
 <!-- ============================================================
      EQUIPAMENTO
      ============================================================ -->
+
 <section class="equipment">
   <div class="wrap">
     <p class="eyebrow">Equipamento</p>
     <h2>Zyon Pro <em class="italic">Cromatic</em></h2>
 
-    <div class="equipment-grid">
-      <div class="equipment-photo">
-        <span class="equipment-photo-label">
-          Foto do equipamento
-          <small>aguardando arquivo</small>
-        </span>
-      </div>
-      <div class="equipment-text">
-        <p>
-          Máquina profissional de depilação a LED, modelo Zyon Pro da Cromatic. Equipamento utilizado por mim na clínica e disponibilizado pra locação dentro do raio.
-        </p>
+```
+<div class="equipment-grid">
+  <div class="equipment-photo">
+    <span class="equipment-photo-label">
+      Foto do equipamento
+      <small>aguardando arquivo</small>
+    </span>
+  </div>
+  <div class="equipment-text">
+    <p>
+      Máquina profissional de depilação a LED, modelo Zyon Pro da Cromatic. Equipamento utilizado por mim na clínica e disponibilizado pra locação dentro do raio.
+    </p>
 
-        <ul class="specs">
-          <li><span class="label">Tecnologia</span><span class="value">LED</span></li>
-          <li><span class="label">Pacotes</span><span class="value">6h · 8h · 12h</span></li>
-          <li><span class="label">Hora extra</span><span class="value">R$ 150</span></li>
-          <li><span class="label">Operação</span><span class="value">Você opera</span></li>
-        </ul>
-      </div>
-    </div>
+    <ul class="specs">
+      <li><span class="label">Tecnologia</span><span class="value">LED</span></li>
+      <li><span class="label">Pacotes</span><span class="value">6h · 8h · 12h</span></li>
+      <li><span class="label">Hora extra</span><span class="value">R$ 150</span></li>
+      <li><span class="label">Operação</span><span class="value">Você opera</span></li>
+    </ul>
+  </div>
+</div>
+```
 
   </div>
 </section>
@@ -1177,20 +1255,23 @@
 <!-- ============================================================
      QUEM PODE ALUGAR + CARD DE TREINAMENTO
      ============================================================ -->
+
 <section class="eligibility">
   <div class="wrap-narrow">
     <p class="eyebrow">Quem pode alugar</p>
     <h2>Profissionais da área da saúde.</h2>
 
-    <p class="eligibility-text">
-      Alugo para <em>profissionais formados em áreas da saúde</em> ou estudantes no último ano de cursos da saúde. A operação do equipamento durante a locação é responsabilidade sua. A comprovação da formação é solicitada no fechamento do orçamento.
-    </p>
+```
+<p class="eligibility-text">
+  Alugo para <em>profissionais formados em áreas da saúde</em> ou estudantes no último ano de cursos da saúde. A operação do equipamento durante a locação é responsabilidade sua. A comprovação da formação é solicitada no fechamento do orçamento.
+</p>
 
-    <div class="training-card">
-      <span class="corner">+</span>
-      <h3>Nunca operou LED antes?</h3>
-      <p>Ofereço treinamento de uso do equipamento. Se você fizer o curso completo de depilação a LED comigo, a locação sai com desconto.</p>
-    </div>
+<div class="training-card">
+  <span class="corner">+</span>
+  <h3>Nunca operou LED antes?</h3>
+  <p>Ofereço treinamento de uso do equipamento. Se você fizer o curso completo de depilação a LED comigo, a locação sai com desconto.</p>
+</div>
+```
 
   </div>
 </section>
@@ -1198,6 +1279,7 @@
 <!-- ============================================================
      ONDE ATENDO
      ============================================================ -->
+
 <section class="cities-section">
   <div class="wrap-narrow">
     <p class="eyebrow">Onde atendo</p>
@@ -1207,38 +1289,49 @@
     <p class="cities-foot">
       Sua cidade não está aqui? Solicite o orçamento mesmo assim. Avalio caso a caso.
     </p>
+
+```
+<div class="cta-inline cta-inline-center">
+  <a href="#orcamento" class="btn">Atende minha cidade? Pedir orçamento</a>
+</div>
+```
+
   </div>
 </section>
 
 <!-- ============================================================
      FAQ
      ============================================================ -->
+
 <section class="faq">
   <div class="wrap-narrow">
     <p class="eyebrow">Dúvidas frequentes</p>
     <h2>Antes do orçamento.</h2>
 
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>Quanto custa a locação?</summary>
-        <div class="answer">Depende da cidade e do pacote (6h, 8h ou 12h). Hora extra fica em R$ 150. Pelo formulário você recebe o valor exato pra sua cidade.</div>
-      </details>
+```
+<div class="faq-list">
+  <details class="faq-item">
+    <summary>Quanto custa a locação?</summary>
+    <div class="answer">Depende da cidade e do pacote (6h, 8h ou 12h). Hora extra fica em R$ 150. Pelo formulário você recebe o valor exato pra sua cidade.</div>
+  </details>
 
-      <details class="faq-item">
-        <summary>Quem pode alugar?</summary>
-        <div class="answer">Profissionais formados em áreas da saúde e estudantes no último ano de cursos da saúde. A comprovação é solicitada no fechamento.</div>
-      </details>
+  <details class="faq-item">
+    <summary>Quem pode alugar?</summary>
+    <div class="answer">Profissionais formados em áreas da saúde e estudantes no último ano de cursos da saúde. A comprovação é solicitada no fechamento.</div>
+  </details>
 
-      <details class="faq-item">
-        <summary>Atende fora dos 300 km?</summary>
-        <div class="answer">O raio padrão é até 300 km de Nova Andradina, MS. Cidades fora do raio são avaliadas caso a caso, com possível ajuste no valor de transporte.</div>
-      </details>
+  <details class="faq-item">
+    <summary>Atende fora dos 300 km?</summary>
+    <div class="answer">O raio padrão é até 300 km de Nova Andradina, MS. Cidades fora do raio são avaliadas caso a caso, com possível ajuste no valor de transporte.</div>
+  </details>
 
-      <details class="faq-item">
-        <summary>E o pagamento, como funciona?</summary>
-        <div class="answer">[ A definir com a Laysa — formas aceitas, antecipação, caução ]</div>
-      </details>
-    </div>
+  <details class="faq-item">
+    <summary>E o pagamento, como funciona?</summary>
+    <div class="answer">[ A definir com a Laysa — formas aceitas, antecipação, caução ]</div>
+  </details>
+</div>
+```
+
   </div>
 </section>
 
@@ -1247,55 +1340,58 @@
 <!-- ============================================================
      FORMULÁRIO — cinza claro quente (substitui preto da v2)
      ============================================================ -->
+
 <section class="form-section">
   <div class="wrap">
 
-    <div class="form-intro">
-      <p class="eyebrow">Solicitar orçamento</p>
-      <h2>Conta da sua locação.</h2>
-      <p class="lede">Respondo pelo WhatsApp em até 24h com o valor fechado pra sua cidade e pacote.</p>
+```
+<div class="form-intro">
+  <p class="eyebrow">Solicitar orçamento</p>
+  <h2>Conta da sua locação.</h2>
+  <p class="lede">Respondo pelo WhatsApp em até 24h com o valor fechado pra sua cidade e pacote.</p>
+</div>
+
+<form class="form-wrap" id="leadForm" novalidate>
+
+  <div class="form-grid two">
+    <div class="field">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="seu nome">
     </div>
+    <div class="field">
+      <label for="whatsapp">WhatsApp</label>
+      <input type="tel" id="whatsapp" name="whatsapp" required autocomplete="tel" placeholder="(00) 0 0000-0000">
+    </div>
+  </div>
 
-    <form class="form-wrap" id="leadForm" novalidate>
+  <div class="form-grid two">
+    <div class="field">
+      <label for="cidade">Cidade · UF</label>
+      <input type="text" id="cidade" name="cidade" required autocomplete="address-level2" placeholder="onde será a locação">
+    </div>
+    <div class="field">
+      <label for="pacote">Pacote</label>
+      <select id="pacote" name="pacote">
+        <option value="">selecione</option>
+        <option value="6h">6 horas</option>
+        <option value="8h">8 horas</option>
+        <option value="12h">12 horas</option>
+        <option value="indefinido">Ainda não sei</option>
+      </select>
+    </div>
+  </div>
 
-      <div class="form-grid two">
-        <div class="field">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="seu nome">
-        </div>
-        <div class="field">
-          <label for="whatsapp">WhatsApp</label>
-          <input type="tel" id="whatsapp" name="whatsapp" required autocomplete="tel" placeholder="(00) 0 0000-0000">
-        </div>
-      </div>
+  <div class="form-submit">
+    <button type="submit" class="btn" id="submitBtn">Enviar solicitação</button>
+  </div>
 
-      <div class="form-grid two">
-        <div class="field">
-          <label for="cidade">Cidade · UF</label>
-          <input type="text" id="cidade" name="cidade" required autocomplete="address-level2" placeholder="onde será a locação">
-        </div>
-        <div class="field">
-          <label for="pacote">Pacote</label>
-          <select id="pacote" name="pacote">
-            <option value="">selecione</option>
-            <option value="6h">6 horas</option>
-            <option value="8h">8 horas</option>
-            <option value="12h">12 horas</option>
-            <option value="indefinido">Ainda não sei</option>
-          </select>
-        </div>
-      </div>
+  <div class="form-foot">
+    <small>Ao enviar, você concorda em receber retorno pelo WhatsApp informado.</small>
+  </div>
 
-      <div class="form-submit">
-        <button type="submit" class="btn" id="submitBtn">Enviar solicitação</button>
-      </div>
-
-      <div class="form-foot">
-        <small>Ao enviar, você concorda em receber retorno pelo WhatsApp informado.</small>
-      </div>
-
-      <div class="form-msg" id="formMsg"></div>
-    </form>
+  <div class="form-msg" id="formMsg"></div>
+</form>
+```
 
   </div>
 </section>
@@ -1303,28 +1399,35 @@
 <!-- ============================================================
      RODAPÉ
      ============================================================ -->
+
 <footer class="site">
   <div class="wrap">
 
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">Laysa <span class="italic">Ventura</span></div>
-        <p class="footer-tag">Locação de Equipamento · Nova Andradina, MS</p>
-      </div>
+```
+<div class="footer-grid">
+  <div>
+    <div class="footer-brand">Laysa <span class="italic">Ventura</span></div>
+    <p class="footer-tag">Locação de Equipamento · Nova Andradina, MS</p>
+  </div>
 
-      <a href="https://wa.me/5567935016168" class="footer-wa" target="_blank" rel="noopener">
-        <span class="label">WhatsApp direto</span>
-        <span class="value">(67) 93501-6168</span>
-      </a>
-    </div>
+  <a href="#orcamento" class="footer-wa">
+    <span class="label">Pronta pra começar?</span>
+    <span class="value">Solicitar orçamento</span>
+  </a>
+</div>
 
-    <div class="footer-bottom">
-      <span>© 2026 Laysa Ventura</span>
-      <span>Atendimento em horário comercial</span>
-    </div>
+<div class="footer-bottom">
+  <span>© 2026 Laysa Ventura</span>
+  <span>Atendimento em horário comercial</span>
+</div>
+```
 
   </div>
 </footer>
+
+<!-- Botão flutuante de orçamento — sempre visível -->
+
+<a href="#orcamento" class="floating-cta" aria-label="Solicitar orçamento">Orçamento</a>
 
 <script>
   // ============================================================
@@ -1420,6 +1523,19 @@
     msg.className = 'form-msg ' + type;
     msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
+
+  // Limpa mensagem de erro quando o usuário começa a digitar/selecionar novamente
+  ['nome', 'whatsapp', 'cidade', 'pacote'].forEach(function(fieldName) {
+    const el = form.elements[fieldName];
+    if (el) {
+      el.addEventListener('input', function() {
+        if (msg.classList.contains('error')) {
+          msg.className = 'form-msg';
+          msg.textContent = '';
+        }
+      });
+    }
+  });
 </script>
 
 </body>
